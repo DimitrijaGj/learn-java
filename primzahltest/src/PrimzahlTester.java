@@ -7,7 +7,6 @@ public class PrimzahlTester {
      * @param n die zu testende nichtnegative Zahl
      */
     public void istPrimzahl(long n) {
-        n = 5L;
        // pruf ob zahl is durch sich selber teilbar ist ohne Rest
         if (n > 2L && n % n == 0L) {
             System.out.println("JA");
@@ -16,10 +15,5 @@ public class PrimzahlTester {
             System.out.println("NEIN");
 
         }
-    }
-
-    public static void main(String[] args) {
-        PrimzahlTester tester = new PrimzahlTester();
-        tester.istPrimzahl(7); // Example: Test if 7 is a prime number
     }
 }
