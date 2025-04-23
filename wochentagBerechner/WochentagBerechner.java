@@ -15,26 +15,26 @@ public class WochentagBerechner {
 		int w;
 		w = (t + (26 * (m + 1))/10 + (5 * j)/4 + c/4 + 5 * c - 1) % 7;
 		switch(w){
-			case 1: 
-				System.out.println("Sonntag");
-				break;
-			case 2:
+			case 0: 
 				System.out.println("Montag");
 				break;
-			case 3:
+			case 1:
 				System.out.println("Dienstag");
 				break;
-			case 4:
+			case 2:
 				System.out.println("Mittwoch");
 				break;
-			case 5:
+			case 3:
 				System.out.println("Donnerstag");
 				break;
-			case 6:
+			case 4:
 				System.out.println("Freitag");
 				break;
-			case 7:
+			case 5:
 				System.out.println("Samstag");
+				break;
+			case 6:
+				System.out.println("Sonntag");
 				break;
 			default:
 				System.out.println("Das ist kein Tag");
@@ -44,9 +44,9 @@ public class WochentagBerechner {
 	public static void main(String[] args) {
 		// Diese Variablen koennen sie veraendern, um Ihre
 		// Implementierung zu testen
-		int t = 8; // der Tag
-		int m = 5; // der Monat
-		int j = 1986; // das Jahr
+		int t = 32; // der Tag
+		int m = 12; // der Monat
+		int j = 2021; // das Jahr
 		// Der nachfolgende Quelltext erzeugt nur die Ausgabe
 		System.out.print("Der ");
 		System.out.print(t);
