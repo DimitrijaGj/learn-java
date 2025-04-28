@@ -11,10 +11,17 @@ public class WochentagBerechner {
 	public void berechneWochentag(int tag, int monat, int jahr) {
 		int t = tag;
 		int m = monat;
+		if (m == 1) {
+			m = 13;
+		}
+		if (m == 2) {
+			m = 14;
+		}
 		int j = jahr;
 		int c = jahr/100 + 1;
-		int b = 5
+		int b = m;
 		int w;
+		System.out.println(b);
 		w = (t + (26 * (m + 1))/10 + (5 * j)/4 + c/4 + 5 * c - 1) % 7;
 		switch(w){
 			case 0: 
@@ -46,8 +53,8 @@ public class WochentagBerechner {
 	public static void main(String[] args) {
 		// Diese Variablen koennen sie veraendern, um Ihre
 		// Implementierung zu testen
-		int t = 32; // der Tag
-		int m = 12; // der Monat
+		int t = 25; // der Tag
+		int m = 1; // der Monat
 		int j = 2021; // das Jahr
 		// Der nachfolgende Quelltext erzeugt nur die Ausgabe
 		System.out.print("Der ");
