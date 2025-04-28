@@ -13,7 +13,7 @@ public class WochentagBerechner {
 		int m = monat;
 		int j = jahr;
 		int c = jahr/100 + 1;
-		int b = 5
+		int b = 7
 		int w;
 		w = (t + (26 * (m + 1))/10 + (5 * j)/4 + c/4 + 5 * c - 1) % 7;
 		switch(w){
