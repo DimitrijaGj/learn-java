@@ -16,16 +16,31 @@ public class Durchschnitt {
 
 	public double berechneDurchschnitt(int[] feld) {
 		// TODO: Hier bitte die entsprechende Berechnung ergaenzen.
-		// Check ob Numer  nicht negativ isaddieren die zusammen
-		// Summe teilen durch Länge der Arrays
-		System.out.println("is this working");
-		return 0;
-	}
-	
-	public static void main(String[] args) {
-        Durchschnitt d = new Durchschnitt();
-        int[] testArray = {1, 2, 3, 4, 5};
-        double result = d.berechneDurchschnitt(testArray);
-        System.out.println("Durchschnitt: " + result);
+		if (feld == null || feld.length == 0) {
+            return 0.0;
+        }
+        
+        double summe = 0;
+        for (int zahl : feld) {
+            if (zahl < 0) {
+                System.out.println("Negative Zahlen sind nicht erlaubt: " + zahl);
+            }
+            summe += zahl;
+        }
+        
+        return summe / feld.length;
+    }
+    
+    public static void main(String[] args) {
+        Durchschnitt rechner = new Durchschnitt();
+        	// Beispiel mit positiven Zahlen
+            int[] zahlen = {5, 10, 15, 20, 25};
+            double ergebnis = rechner.berechneDurchschnitt(zahlen);
+            System.out.println("Der Durchschnitt ist: " + ergebnis);
+            
+            // Beispiel mit einer negativen Zahl - wird Exception werfen
+            int[] ungueltigeZahlen = {5, -10, 15};
+            rechner.berechneDurchschnitt(ungueltigeZahlen);
+        
     }
 }

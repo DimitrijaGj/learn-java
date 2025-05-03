@@ -1,31 +1,36 @@
 import java.util.Arrays;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+public class DurchschnittTest {
 public class DurchschnittTest extends TestCase {
 
 	Durchschnitt d = new Durchschnitt();
-
+	@Test
+	public void testLeeresFeld() {
 	public void testLeeresFeld() {
 		double x = d.berechneDurchschnitt(new int[0]);
 		double d = 0;
 		assertEquals("Durchschnitt eines Arrays der Groesse 0 ist " + x
 				+ " statt " + d +".", d, x);
-	}
+	@Test
+	public void testEinerFeld() {
 
 	public void testEinerFeld() {
 		int[] f = { 3 };
 		double x = d.berechneDurchschnitt(f);
 		double d = 3;
 		assertEquals("Durchschnitt eines Arrays der Groesse 1 ist " + x
-				+ " statt " + d + ".", d, x);
+	@Test
+	public void testKleinesFeld() {
 	}
 
 	public void testKleinesFeld() {
 		int[] f = { 3, 6, 11, 4, 2 };
 		double x = d.berechneDurchschnitt(f);
 		double d = 5.2;
-		assertEquals("Durchschnitt des Arrays " + Arrays.toString(f) + " ist "
+	@Test
+	public void testGrossesFeld() {
 				+ x + " statt " + d + ".", d, x);
 	}
 
