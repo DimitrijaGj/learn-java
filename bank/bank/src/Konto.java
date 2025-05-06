@@ -1,6 +1,4 @@
 
-import java.util.prefs.BackingStoreException;
-
 public class Konto {
 // Atributen
 long kontoNr;
@@ -21,6 +19,21 @@ public void auszahlen(long cent){
 }
 public void  einzahlen(long cent) {
     this.kontostand += cent;
+}
+public String liefereBankname () {
+    return bank.liefereName();
+}
+public long liefereBLZ(){
+    return bank.liefereBLZ();
+}
+public String liefereInhabername() {
+    return inhaber.liefereName();
+}
+public long  liefereKontonummer() {
+    return kontoNr;
+}
+public long kontoStand() {
+    return kontostand;
 }
 
     /**
