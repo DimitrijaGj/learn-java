@@ -22,6 +22,16 @@ public class Woerterraten {
 	 */
 	void aktualisiereLoesung(char c) {
 		// TODO
+        /*Diese Methode soll an jeder Position, an der in der Variable zuRatendesWort das Zeichen c auftritt, 
+        * den * in der Variable erratenesWort durch c ersetzen.
+        */
+        for (int i = 0; i < zuRatendesWort.length(); i++) {
+            if (zuRatendesWort.charAt(i) == c) {
+                // das Sternchen an der entsprechenden Stelle ersetzen
+                erratenesWort.setCharAt(i, c);
+            }
+        }
+        
 	}
 
 	/**
