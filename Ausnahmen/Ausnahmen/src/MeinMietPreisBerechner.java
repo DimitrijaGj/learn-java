@@ -4,7 +4,10 @@ public class MeinMietPreisBerechner {
         int Kilometer = km;
         int Pauschale = 0;
         if (Mietdauer < 1) {
-            throw new UngueltigeTagesanzahlAusnahme();
+            throw new UngueltigeTagesanzahlAusnahme(int tage) {
+                try 
+                )
+            };
         }
 
 	}
